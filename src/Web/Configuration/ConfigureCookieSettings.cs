@@ -17,7 +17,7 @@
             });
             services.ConfigureApplicationCookie(options =>
             {
-                options.LogoutPath = "https://www.google.com";
+                options.LogoutPath = "/Account/Logout";
                 options.LoginPath = "/Account/Login";
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(CookieValidationPeriod);
                 options.Cookie = new CookieBuilder { Name = IdentifierCookieName, IsEssential = true };

@@ -11,6 +11,7 @@ namespace Infrastructure.Data
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostComment> Comments { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

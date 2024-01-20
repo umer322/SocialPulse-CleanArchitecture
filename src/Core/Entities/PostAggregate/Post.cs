@@ -6,13 +6,13 @@ namespace Core.Entities.PostAggregate
     public class Post : BaseEntity<int>, IAggregateRoot
     {
         public int UserId { get; private set; }
-        public string Title { get; private set; }
-        public string Description { get; private set; }
+        public string? Title { get; private set; }
+        public string? Description { get; private set; }
 
         private readonly List<PostComment> _comments = new List<PostComment>();
         public IReadOnlyCollection<PostComment> Comments => _comments.AsReadOnly();
 
-#pragma warning disable
+
         private Post() { }
 
         public Post(string title, string description, int userId)
